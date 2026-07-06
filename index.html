@@ -12,8 +12,8 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jason Barnachea | Software Engineer</title>
-  <meta name="description" content="Jason Barnachea — software engineer and builder based in Santa Monica, California. Projects, experience, and certifications.">
+  <title>nautxx | Multi-Agent Systems Builder</title>
+  <meta name="description" content="nautxx — software engineer and builder based in Santa Monica, California. Projects, experience, and certifications.">
   <meta name="author" content="Jason Barnachea">
 
   <link rel="preload" href="static/fonts/bogart.ttf" as="font" type="font/ttf" crossorigin>
@@ -159,10 +159,10 @@
             <h3>Quality Operations</h3>
             <p>QITPs, inspections, audits, compliance tracking, closeout documentation</p>
           </article>
-          <article class="experience-capability">
-            <span class="experience-capability__icon" aria-hidden="true">↯</span>
-            <h3>Automation &amp; Tooling</h3>
-            <p>Python PDF parsing, JavaScript workflows, document control, repeatable systems</p>
+          <article class="experience-capability experience-capability--agentic">
+            <span class="experience-capability__icon" aria-hidden="true">ϟ</span>
+            <h3>Agentic Workflows</h3>
+            <p>LLM agents, tool use, HITL handoffs, voice, messaging, and automation loops</p>
           </article>
           <article class="experience-capability">
             <span class="experience-capability__icon" aria-hidden="true">↯</span>
@@ -461,7 +461,10 @@
           </article>
 
           <article class="experience-project experience-project--compact">
-            <span class="experience-project__icon" aria-hidden="true">▤</span>
+            <div class="experience-project__mini-head">
+              <span class="experience-project__icon" aria-hidden="true">▤</span>
+              <span class="experience-project__pill">Private · On Request</span>
+            </div>
             <h3 class="experience-project__title">nautsfw-infra</h3>
             <p class="experience-project__desc">Self-hosted Docker, Caddy, uptime monitoring, dashboards, internal tools, and home-lab deployment patterns.</p>
             <div class="project-tags" aria-label="nautsfw-infra technologies">
@@ -479,7 +482,10 @@
           </article>
 
           <article class="experience-project experience-project--compact experience-project--accent">
-            <span class="experience-project__icon" aria-hidden="true">⌁</span>
+            <div class="experience-project__mini-head">
+              <span class="experience-project__icon" aria-hidden="true">⌁</span>
+              <span class="experience-project__pill">This Portfolio</span>
+            </div>
             <h3 class="experience-project__title">nautsfw.com</h3>
             <p class="experience-project__desc">Static portfolio system with responsive sections, theme switching, privacy page, project cards, and resume-focused content.</p>
             <div class="project-tags" aria-label="nautsfw.com technologies">
@@ -498,13 +504,19 @@
         </div>
 
         <div class="tiles tiles--restored" aria-label="Additional projects">
-          <a href="https://github.com/nautxx/u80-a-build" class="tile" target="_blank" rel="noopener">
-            <span class="tile__category">Keyboard</span>
-            <h3 class="tile__title">U80-A Build</h3>
-            <div class="tile__img-wrap">
-              <img src="static/img/rw-u80.png" alt="U80-A mechanical keyboard build" loading="lazy">
+          <article class="tile tile--with-footer">
+            <a href="https://github.com/nautxx/u80-a-build" class="tile__main-link" target="_blank" rel="noopener" aria-label="View U80-A Build project on GitHub">
+              <span class="tile__category">Keyboard</span>
+              <h3 class="tile__title">U80-A Build</h3>
+              <div class="tile__img-wrap">
+                <img src="static/img/rw-u80.png" alt="U80-A mechanical keyboard build" loading="lazy">
+              </div>
+            </a>
+            <div class="tile__footer">
+              <span>r/MechanicalKeyboards</span>
+              <a href="https://www.reddit.com/r/MechanicalKeyboards/comments/7u53li/rama_m65a/" target="_blank" rel="noopener" aria-label="Read U80-A Build on Reddit">Read on Reddit ↗</a>
             </div>
-          </a>
+          </article>
           <a href="https://github.com/nautxx/crypto-ticker" class="tile" target="_blank" rel="noopener">
             <span class="tile__category">Terminal App</span>
             <h3 class="tile__title">Crypto Ticker</h3>
@@ -527,6 +539,29 @@
             </div>
           </a>
         </div>
+
+        <article class="claude-power-card" aria-label="Claude Code power user workflow">
+          <div class="claude-power-card__icon" aria-hidden="true">✣</div>
+          <div class="claude-power-card__body">
+            <div class="claude-power-card__head">
+              <h3>Claude Code Power User</h3>
+              <span>High-Agency · AI-Fluency</span>
+            </div>
+            <p>My daily workflow is an agentic build lab: Claude Code, MCPs, custom project instructions, reusable skills, and human-in-the-loop review for shipping real work faster.</p>
+            <ul class="claude-power-card__list">
+              <li>Multi-agent workflows across portfolio work, infra tasks, support bots, phrase QA, and software builds.</li>
+              <li>MCP-style tool use for GitHub, calendar, docs, local files, deployment notes, and repeatable project operations.</li>
+              <li>Memory and context discipline: turning messy chats, screenshots, issues, and design feedback into durable project instructions.</li>
+              <li>Reusable AI workflows for code review, content cleanup, QA documentation, marketing support, and customer operations.</li>
+            </ul>
+            <div class="claude-power-card__badges" aria-label="Claude and AI workflow credentials">
+              <span>Building with the Claude API</span>
+              <span>Advanced MCP Topics</span>
+              <span>Claude Code in Action</span>
+              <span>Introduction to MCP</span>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
