@@ -259,6 +259,14 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 /* ---------- Intro ---------- */
 .intro { text-align: center; padding-top: 0; }
 
+.pill-nav {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
 .pill-nav__link {
   display: inline-flex;
   align-items: center;
@@ -295,6 +303,12 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 .section { padding: 4rem 1.5rem; }
 .section--muted { background: hsl(var(--muted) / 0.5); }
 .section__inner { max-width: var(--max-width); margin: 0 auto; }
+#experience .section__inner,
+#projects .section__inner,
+#credentials .section__inner,
+#skills .section__inner {
+  max-width: 1040px;
+}
 .section__inner--center { text-align: center; }
 .section__inner--center .section__lede { margin-left: auto; margin-right: auto; }
 .section__title {
@@ -398,8 +412,8 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 /* ---------- Skills ---------- */
 .skills-layout {
   display: grid;
-  grid-template-columns: minmax(180px, 240px) 1fr;
-  gap: 2.5rem;
+  grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
+  gap: 2rem;
   align-items: start;
 }
 .skills-sidebar { display: flex; flex-direction: column; gap: 2rem; }
@@ -425,8 +439,9 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 245px));
+  justify-content: start;
+  gap: 1.25rem;
 }
 .tech-card {
   background: hsl(var(--card));
@@ -445,6 +460,11 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 
 @media (max-width: 700px) {
   .skills-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .tech-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .tech-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------- Education & Certifications ---------- */
