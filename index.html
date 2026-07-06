@@ -39,22 +39,86 @@
           </picture>
         </div>
         <div class="hero__copy">
-          <p class="hero__eyebrow">Hi, I'm Jason</p>
-          <h1 class="hero__title">Software Engineer &amp; Builder</h1>
+          <p class="hero__eyebrow">Hi, I'm @nautxx</p>
+          <h1 class="hero__title">
+            <span id="roleText" class="hero__role" aria-hidden="true"></span>
+            <span class="sr-only">Multi-Agent Systems Builder, Open-source builder, Systems Engineer, Quality Engineer</span>
+          </h1>
+          <div class="role-pills" id="rolePills">
+            <span class="role-pill" data-role-index="0">Multi-Agent Systems Builder</span>
+            <span class="role-pill" data-role-index="1">Open-source builder</span>
+            <span class="role-pill" data-role-index="2">Systems Engineer</span>
+            <span class="role-pill" data-role-index="3">Quality Engineer</span>
+          </div>
         </div>
       </div>
     </header>
 
     <section class="section intro" id="intro">
       <div class="section__inner">
-        <p class="hero__sub">I build things with a keen eye on quality and aesthetics — 17+ years across construction engineering and software, based in Santa Monica, California.</p>
-        <p class="hero__sub">Out of the office you'll find me building freestyle drones and mechanical keyboards, drinking coffee, watching Formula One, and petting all the goodest dogs.</p>
+        <p class="hero__sub hero__sub--lead">17+ years building systems that last.</p>
+        <p class="hero__sub">I build with a sharp eye for quality, usability, and aesthetics — across construction engineering, field systems, service operations, and software.</p>
+        <p class="hero__sub">From major infrastructure projects to automation-backed businesses, I turn messy problems into working systems: inspection workflows, testing processes, SOPs, customer operations, custom builds, and tools built end-to-end.</p>
+        <p class="hero__sub">At Codenauts, I turned repeatable problems into repeatable systems — cleaner workflows, documented processes, automation, and self-service support for customers and teams.</p>
+        <p class="hero__sub">Build it well. Make it useful. Make it last.</p>
+        <p class="hero__sub">This still feels like day one. Ready for what’s next.</p>
         <nav class="pill-nav" aria-label="Jump to section">
-          <a href="#experience" class="pill-nav__link">My path</a>
-          <a href="#projects" class="pill-nav__link">What I build</a>
-          <a href="#credentials" class="pill-nav__link">Education &amp; Certifications</a>
-          <a href="#skills" class="pill-nav__link">Skills</a>
-          <a href="#contact" class="pill-nav__link pill-nav__link--accent">Let's talk</a>
+          <a href="#experience" class="pill-nav__link">
+            <span class="pill-nav__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="7" width="18" height="13" rx="2" />
+                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                <path d="M12 12v3" />
+              </svg>
+            </span>
+            My path
+          </a>
+        
+          <a href="#projects" class="pill-nav__link">
+            <span class="pill-nav__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M6 3h12l3 5-9 13L3 8l3-5Z" />
+                <path d="M3 8h18" />
+                <path d="m8 8 4 13 4-13" />
+              </svg>
+            </span>
+            What I build
+          </a>
+        
+          <a href="#credentials" class="pill-nav__link">
+            <span class="pill-nav__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+                <path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5" />
+              </svg>
+            </span>
+            Education &amp; Certifications
+          </a>
+        
+          <a href="#skills" class="pill-nav__link">
+            <span class="pill-nav__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </span>
+            Skills
+          </a>
+        
+          <a href="#contact" class="pill-nav__link pill-nav__link--accent">
+            <span class="pill-nav__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+            </span>
+            Let's talk
+          </a>
         </nav>
       </div>
     </section>
@@ -300,11 +364,12 @@
             </div>
 
             <div class="skills-col">
-              <h3 class="skills-col__title">Interests</h3>
+              <h3 class="skills-col__title">Soft Skills</h3>
               <div class="badge-row">
-                <span class="badge badge--accent">Mechanical Keyboards</span>
-                <span class="badge badge--accent">FPV Drones</span>
-                <span class="badge badge--accent">Formula One</span>
+                <span class="badge badge--accent">Communications</span>
+                <span class="badge badge--accent">Leadership</span>
+                <span class="badge badge--accent">Systems Thinking</span>
+                <span class="badge badge--accent">Bias for Action</span>
               </div>
             </div>
           </div>
@@ -330,7 +395,8 @@
               <div class="tech-card">
                 <h4 class="tech-card__title">Integrations</h4>
                 <div class="badge-row">
-                  <span class="badge">WATI (WhatsApp)</span>
+                  <span class="badge"><img class="badge__icon" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/whatsapp.png" alt=""
+                    loading="lazy">WATI (WhatsApp)</span>
                   <span class="badge"><img class="badge__icon" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/facebook.png" alt="" loading="lazy">Facebook API</span>
                 </div>
               </div>

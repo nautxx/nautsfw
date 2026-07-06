@@ -27,3 +27,50 @@ const sectionObserver = new IntersectionObserver(
   { rootMargin: "-40% 0px -40% 0px", threshold: 0 }
 );
 sections.forEach((section) => sectionObserver.observe(section));
+
+const roles = [
+  "Multi-Agent Systems Builder",
+  "Open-source builder",
+  "Systems Engineer",
+  "Quality Engineer",
+];
+const roleTextEl = document.getElementById("roleText");
+const rolePills = document.querySelectorAll(".role-pill");
+
+function setActiveRolePill(index) {
+  rolePills.forEach((pill) => {
+    pill.classList.toggle("is-active", Number(pill.dataset.roleIndex) === index);
+  });
+}
+
+let roleIndex = 0;
+let charIndex = 0;
+let typing = true;
+
+function tickRole() {
+  const current = roles[roleIndex];
+  if (typing) {
+    charIndex++;
+    roleTextEl.textContent = current.slice(0, charIndex);
+    if (charIndex === current.length) {
+      typing = false;
+      setTimeout(tickRole, 1800);
+      return;
+    }
+    setTimeout(tickRole, 45);
+  } else {
+    charIndex--;
+    roleTextEl.textContent = current.slice(0, charIndex);
+    if (charIndex === 0) {
+      typing = true;
+      roleIndex = (roleIndex + 1) % roles.length;
+      setActiveRolePill(roleIndex);
+      setTimeout(tickRole, 300);
+      return;
+    }
+    setTimeout(tickRole, 25);
+  }
+}
+
+setActiveRolePill(roleIndex);
+tickRole();
