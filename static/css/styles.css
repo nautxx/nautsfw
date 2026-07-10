@@ -189,9 +189,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 .hero {
   position: relative;
   overflow: hidden;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 6rem 1.5rem 3.5rem;
+  width: 100%;
   text-align: center;
 }
 .hero__snakes {
@@ -246,6 +244,9 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 .hero__inner {
   position: relative;
   z-index: 2;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 6rem 1.5rem 3.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
