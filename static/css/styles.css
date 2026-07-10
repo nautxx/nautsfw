@@ -267,7 +267,6 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 .hero__eyebrow {
   margin: 0 0 0.5rem;
   color: hsl(var(--primary));
-  text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.8rem;
   font-weight: 600;
@@ -344,6 +343,21 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 .hero__sub--lead {
   font-weight: 800;
   color: hsl(var(--foreground));
+}
+.hero__sub-highlight {
+  background: linear-gradient(90deg, hsl(var(--gradient-from)), hsl(var(--gradient-to)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+.hero__sub-strong {
+  color: hsl(var(--foreground));
+  font-weight: 800;
+}
+.hero__sub-accent {
+  color: hsl(var(--primary));
+  font-weight: 700;
 }
 
 @media (max-width: 640px) {
