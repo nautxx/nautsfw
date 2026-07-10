@@ -1232,7 +1232,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 }
 
 /* ---------- Section header icon (Skills/Education/Certifications) ---------- */
-.section__head { display: flex; align-items: center; gap: 0.85rem; }
+.section__head { display: flex; align-items: center; gap: 0.85rem; margin-bottom: 3rem; }
 .section__head .section__title { margin-bottom: 0; }
 .section__icon {
   display: flex;
@@ -1256,6 +1256,15 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 }
 .skills-sidebar { display: flex; flex-direction: column; gap: 2rem; }
 .skills-col__title { font-size: 1rem; margin-bottom: 0.75rem; }
+.skills-col__title--icon { display: flex; align-items: center; gap: 0.5rem; }
+.skills-col__icon { display: inline-flex; color: hsl(var(--primary)); }
+.skills-col__icon svg { width: 1.1rem; height: 1.1rem; }
+
+.lang-list { display: flex; flex-direction: column; gap: 0.85rem; }
+.lang-row { display: flex; align-items: baseline; justify-content: space-between; gap: 0.75rem; }
+.lang-row__name { font-weight: 600; }
+.lang-row__level { color: hsl(var(--muted-foreground)); font-size: 0.875rem; }
+.lang-row__level--native { color: hsl(var(--primary)); font-weight: 600; }
 .badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .badge {
   display: inline-flex;
