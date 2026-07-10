@@ -13,6 +13,8 @@
   --gradient-from: 187 86% 53%;
   --gradient-to: 270 91% 65%;
   --dot-grid: 240 5% 35%;
+  --hero-orb-primary: 187 74% 28% / 0.15;
+  --hero-orb-accent: 270 70% 38% / 0.12;
 
   --font-body: "DM Sans", "Inter", system-ui, sans-serif;
   --font-display: "Space Grotesk", "Bogart", "Inter", system-ui, sans-serif;
@@ -35,6 +37,8 @@
   --gradient-from: 187 86% 53%;
   --gradient-to: 270 91% 78%;
   --dot-grid: 240 5% 65%;
+  --hero-orb-primary: 187 86% 53% / 0.08;
+  --hero-orb-accent: 270 91% 70% / 0.10;
 }
 
 @font-face {
@@ -183,12 +187,65 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); }
 
 /* ---------- Hero ---------- */
 .hero {
+  position: relative;
+  overflow: hidden;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 6rem 1.5rem 3.5rem;
   text-align: center;
 }
+.hero__snakes {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero__tint {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.05) 55%, transparent);
+}
+.hero__orb {
+  position: absolute;
+  z-index: 0;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(64px);
+  pointer-events: none;
+}
+.hero__orb--primary {
+  top: 0;
+  right: max(0px, calc(50% - 30rem));
+  background: hsl(var(--hero-orb-primary));
+  animation: hero-glow-primary 8s ease-in-out infinite;
+}
+.hero__orb--accent {
+  bottom: 0;
+  left: max(0px, calc(50% - 30rem));
+  width: 380px;
+  height: 380px;
+  background: hsl(var(--hero-orb-accent));
+  animation: hero-glow-accent 11s ease-in-out infinite reverse;
+}
+@keyframes hero-glow-primary {
+  0%, 100% { transform: translate(33%, -33%) scale(1); opacity: 0.6; }
+  50% { transform: translate(33%, -33%) scale(1.12); opacity: 1; }
+}
+@keyframes hero-glow-accent {
+  0%, 100% { transform: translate(-33%, 33%) scale(1); opacity: 0.6; }
+  50% { transform: translate(-33%, 33%) scale(1.12); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__orb { animation-name: none; }
+}
+@media (max-width: 640px) {
+  .hero__orb { display: none; }
+}
 .hero__inner {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: row;
   align-items: center;
