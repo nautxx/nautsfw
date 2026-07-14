@@ -149,9 +149,9 @@ if (heroSnakesCanvas) {
     for (const snake of snakes) {
       for (let i = 0; i < snake.trail.length; i++) {
         const [gx, gy] = snake.trail[i];
-        const alpha = ((i + 1) / snake.trail.length) * 0.5;
+        const alpha = 0.45 + ((i + 1) / snake.trail.length) * 0.55;
         ctx.beginPath();
-        ctx.arc(gx * GRID + GRID / 2, gy * GRID + GRID / 2, 1.5, 0, Math.PI * 2);
+        ctx.arc(gx * GRID + GRID / 2, gy * GRID + GRID / 2, 2, 0, Math.PI * 2);
         ctx.fillStyle = `hsl(${DOT_COLOR} / ${alpha})`;
         ctx.fill();
       }
