@@ -121,6 +121,8 @@ if (heroSnakesCanvas) {
     return { trail: [[x, y]], dir: DIRS[Math.floor(Math.random() * 4)] };
   });
 
+  const DOT_COLOR = "187 86% 53%";
+
   function tick() {
     const c = cols();
     const r = rows();
@@ -150,7 +152,7 @@ if (heroSnakesCanvas) {
         const alpha = ((i + 1) / snake.trail.length) * 0.5;
         ctx.beginPath();
         ctx.arc(gx * GRID + GRID / 2, gy * GRID + GRID / 2, 1.5, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 217, 255, ${alpha})`;
+        ctx.fillStyle = `hsl(${DOT_COLOR} / ${alpha})`;
         ctx.fill();
       }
     }
